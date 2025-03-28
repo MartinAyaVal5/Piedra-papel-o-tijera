@@ -45,11 +45,11 @@ function seleccionarMascotaJugador(){
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
     if (hipodogeSeleccionado){
-        spanMascotaJugador.innerHTML = "Hipodoge"
+        spanMascotaJugador.innerHTML = "LEOPARDO"
     }else if(capipepoSeleccionado){
-        spanMascotaJugador.innerHTML = "Capipepo"
+        spanMascotaJugador.innerHTML = "LOBO"
     }else if(ratigueyaSeleccionado){
-        spanMascotaJugador.innerHTML = "Ratigueya"
+        spanMascotaJugador.innerHTML = "TIGRE"
     }else{
         alert("Debes seleccionar una Mascota")
     }
@@ -62,11 +62,11 @@ function seleccionarMascotaEmemigo(){
     let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
     if(mascotaAleatorio == 1){
-        spanMascotaEnemigo.innerHTML = "Hipodoge"
+        spanMascotaEnemigo.innerHTML = "LEOPARDO"
     }else if(mascotaAleatorio == 2){
-        spanMascotaEnemigo.innerHTML = "Capipepo"
+        spanMascotaEnemigo.innerHTML = "LOBO"
     }else{
-        spanMascotaEnemigo.innerHTML = "Ratigueya"
+        spanMascotaEnemigo.innerHTML = "TIGRE"
     }
 
 }

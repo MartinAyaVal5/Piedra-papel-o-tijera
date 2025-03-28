@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 body{
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Consolas", sans-serif;
     background-image: url("assets/fondo.jpg");
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
@@ -17,13 +17,13 @@ body{
 }
 
 .titulo {
-    color: #03045e;
+    color: #0508d4;
     font-size: 80px;
     
 }
 
 .subtitulo{
-    color: #03045e;
+    color: #0508d4;
     font-size: 30px;
     background-color: rgb(189, 224, 254, 0.7);
     border: 1px solid black;
@@ -38,17 +38,15 @@ body{
 
 .tarjetas{
     display: flex;
-    gap: 10px;
+    gap: 50px;
 }
 
 .tarjeta-de-mokepon{
     box-sizing: border-box; /*Mantiene las dimensiones de la Caja */
-    width: 300px;
-    height: 300px;
-    background: rgb(189, 224, 254, 0.7);
+    width: 400px;
+    height: 400px;
+    background: rgba(189, 224, 254, 0.589);
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +55,8 @@ body{
 }
 
 .tarjeta-de-mokepon img{
-    width: 200px;
-    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tarjeta-de-mokepon p{
@@ -70,11 +68,12 @@ input{
 }
 
 #boton-mascota{
+    color:rgb(255, 255, 255);
     box-sizing: border-box;
     width: 150px;
     height: 50px;
-    background-color: chartreuse;
-    border: 2px solid black;
+    background: rgba(189, 224, 254, 0.589);
+    border: 2px solid rgb(0, 60, 255);
     border-radius: 20px;
     padding: 10px;
     margin: 50px;
@@ -124,4 +123,28 @@ input{
     grid-template-columns: 100px 100px;
     text-align: center;
     text-align: center;
+}
+
+/* Agrega esto a tu CSS */
+.tarjeta-de-mokepon {
+    /* Tus estilos actuales... */
+    transition: all 0.3s ease; /* Para una transición suave */
+    cursor: pointer;
+}
+
+.tarjeta-de-mokepon.seleccionado {
+    background: rgba(144, 238, 144, 0.7); /* Verde claro */
+    border: 3px solid #006400; /* Borde verde oscuro */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.tarjeta-de-mokepon:hover {
+    background: rgba(173, 216, 230, 0.7); /* Azul claro al pasar el mouse */
+}
+
+input[type="radio"]:checked + label.tarjeta-de-mokepon {
+    background: rgba(5, 9, 255, 0.438);
+    border: 3px solid #193097;
+    transform: scale(1.05);
+    color: white;
 }
