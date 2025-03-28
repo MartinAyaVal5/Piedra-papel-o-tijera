@@ -6,6 +6,7 @@ body{
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: #01002a;
     z-index: -1; /* Asegura que la imagen esté detrás del contenido */    
 }
 
@@ -68,30 +69,44 @@ input{
 }
 
 #boton-mascota{
-    color:rgb(255, 255, 255);
+    color:rgb(4, 0, 255);
     box-sizing: border-box;
     width: 150px;
     height: 50px;
     background: rgba(189, 224, 254, 0.589);
-    border: 2px solid rgb(0, 60, 255);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
     padding: 10px;
     margin: 50px;
     font-size: 20px;
 }
 
+#boton-mascota:hover{
+    color:white;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
 #seleccionar-ataque{
     flex-direction: column;
     align-items: center;
+    padding: 50px;
 }
 
 .boton-ataque{
-    background-color: chartreuse;
+    color: white;
+    background-color: rgba(0, 12, 185, 0.753);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
-    width: 120px;
+    width: 150px;
+    height: 80px;
     font-size: 20px;
+}
+
+.boton-ataque:hover{
+    background: rgba(189, 224, 254, 0.589);
+    color: rgb(0, 0, 121);
 }
 
 #resultado{
@@ -104,26 +119,39 @@ input{
     justify-content: center;
     font-size: 20px;
     color: #03045e;
+    text-align: center;
 }
 
 #boton-reiniciar{
-    box-sizing: border-box;
-    width: 130px;
-    height: 40px;
-    background-color: chartreuse;
-    border: 2px solid black;
-    border-radius: 20px;
+    color: white;
+    background-color: rgba(0, 17, 255, 0.39);
     padding: 10px;
-    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 150px;
+    height: 80px;
     font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 45px;
 }
 
 .ataques{
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    font-size: 20px;
+    background-color: #1a01ff6b;
+    color: white;
     display: grid;
     grid-template-columns: 100px 100px;
-    text-align: center;
-    text-align: center;
+    padding-left: 60px;
+    gap:50px;
+    border-radius: 20px;   
+    border-color: #03045e; 
 }
+
+
 
 /* Agrega esto a tu CSS */
 .tarjeta-de-mokepon {
@@ -140,6 +168,7 @@ input{
 
 .tarjeta-de-mokepon:hover {
     background: rgba(173, 216, 230, 0.7); /* Azul claro al pasar el mouse */
+    border-radius: 50px;
 }
 
 input[type="radio"]:checked + label.tarjeta-de-mokepon {

@@ -32,15 +32,20 @@ function iniciarJuego(){
 
 function seleccionarMascotaJugador(){
 
+    let hipodogeSeleccionado = document.getElementById("hipodoge").checked
+    let capipepoSeleccionado = document.getElementById("capipepo").checked
+    let ratigueyaSeleccionado = document.getElementById("ratigueya").checked
+
+    if (!hipodogeSeleccionado && !capipepoSeleccionado && !ratigueyaSeleccionado){
+        alert("Debes seleccionar una Mascota")
+        return // Salimos de la función si no hay selección
+    }
+
     let sectionSeleccionarMascota= document.getElementById("seleccionar-mascota")
     sectionSeleccionarMascota.style.display = "none"
 
     let sectionSeleccionarAtaque= document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = "flex"
-
-    let hipodogeSeleccionado = document.getElementById("hipodoge").checked
-    let capipepoSeleccionado = document.getElementById("capipepo").checked
-    let ratigueyaSeleccionado = document.getElementById("ratigueya").checked
 
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
